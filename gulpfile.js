@@ -5,7 +5,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const cssnano = require('gulp-cssnano');
 const gulpIf = require('gulp-if');
-const uglify = require('gulp-uglify');
+// const uglify = require('gulp-uglify');
 const useref = require('gulp-useref');
 const fileinclude = require('gulp-file-include');
 const imagemin = require('gulp-imagemin');
@@ -27,7 +27,7 @@ const terser = require('gulp-terser');
 //compile scss into css
 let style = () => {
     // 1. where is my scss file
-    return gulp.src('Starter-file/sass/**/*.scss')
+    return gulp.src('final/sass/**/*.scss')
         // 2. pass the file through sass compiler
         .pipe(sass().on('error', sass.logError))
         // 3. pass the file through autoprifixer
@@ -39,7 +39,7 @@ let style = () => {
         // 6. pass the files through sourcemaps ?
         .pipe(sourcemaps.write('.'))
         // 7. where do i save the compiled CSS ?
-        .pipe(gulp.dest('Starter-file/dist/css'))
+        .pipe(gulp.dest('final/dist/css'))
         // 8. stream changes to all browsers
         .pipe(browserSync.stream());
 }
@@ -55,7 +55,7 @@ let userref = () => {
         // 3. pass the file through css minifier
         // .pipe(gulpIf('*.css', cssnano()))
 
-        .pipe(gulp.dest('Starter-file/dist'));
+        .pipe(gulp.dest('final/dist'));
 }
  
 
@@ -69,27 +69,27 @@ let userref = () => {
 // }
 
 let imgminify = () => {
-    return gulp.src('Starter-file/img/**/*.+(png|jpg|jpeg|gif|svg)')
+    return gulp.src('final/img/**/*.+(png|jpg|jpeg|gif|svg)')
         // Caching images that ran through imagemin
         .pipe(cache(imagemin({
             // Setting interlaced to true
             interlaced: true
         })))
-        .pipe(gulp.dest('Starter-file/dist/images'))
+        .pipe(gulp.dest('final/dist/images'))
 }
 
 function watch() {
     browserSync.init({
         server: {
-            baseDir: './Starter-file/dist'
+            baseDir: './final/dist'
         }
     });
-    gulp.watch('./Starter-file/sass/**/*.scss', style);
-    gulp.watch('./Starter-file/sass/**/*.scss', userref);
-    gulp.watch('./Starter-file/pages/*.html', userref);
-    gulp.watch('./Starter-file/includes/*.html', userref);
+    gulp.watch('./final/sass/**/*.scss', style);
+    gulp.watch('./final/sass/**/*.scss', userref);
+    gulp.watch('./final/pages/*.html', userref);
+    gulp.watch('./final/includes/*.html', userref);
     gulp.watch('./**/*.html').on('change', browserSync.reload);
-    gulp.watch('./Starter-file/js/**/*.js').on('change', browserSync.reload);
+    gulp.watch('./final/js/**/*.js').on('change', browserSync.reload);
 
 }
 

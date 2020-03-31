@@ -45,7 +45,7 @@ let style = () => {
 }
 
 let userref = () => {
-    return gulp.src('./pages/*.html')
+    return gulp.src('./final/*.html')
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'
@@ -86,8 +86,8 @@ function watch() {
     });
     gulp.watch('./final/sass/**/*.scss', style);
     gulp.watch('./final/sass/**/*.scss', userref);
-    gulp.watch('./final/pages/*.html', userref);
-    gulp.watch('./final/includes/*.html', userref);
+    gulp.watch('./final/*.html', userref);
+    gulp.watch('./final/include/*.html', userref);
     gulp.watch('./**/*.html').on('change', browserSync.reload);
     gulp.watch('./final/js/**/*.js').on('change', browserSync.reload);
 

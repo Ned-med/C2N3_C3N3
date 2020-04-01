@@ -1,0 +1,28 @@
+
+//colors
+$color-primary: #1078AD;
+$color-white: #fff;
+$color-black: #000;
+$color-yellow: #F4CF1B;
+
+
+//ANIMATIONS stuff
+$hover: all 0.2s ease-in;
+$slide: all 0.3s cubic-bezier(.55,0,.1,1);
+$slide-delay: all 0.4s 0.1s  cubic-bezier(.55,0,.1,1);
+$slide-slow: all 0.5s  cubic-bezier(.55,0,.1,1);
+$zoom: all 1s cubic-bezier(.55,0,.1,1);
+$zoom-slow: all 2.4s cubic-bezier(.55,0,.1,1);
+$default-shadow: 0 1.5rem 4rem 0 rgba($color-black, .2);
+$Second-shadow: 0 1rem 3.5rem 0 rgba($color-black,.1);
+
+
+
+
+//layout vars
+$default-padding: 3rem;
+$default-font-size: 1.5rem;
+$regular-font-weight: 400;
+$light-font-weight: 300;
+$medium-font-weight: 500;
+$bold-font-weight: 700;

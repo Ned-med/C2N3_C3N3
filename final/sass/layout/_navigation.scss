@@ -1,0 +1,44 @@
+.navigation {
+    display: grid;
+    grid-template-columns: 10rem repeat(2, 1fr) 10rem;
+    align-items: center;
+    .logo-box {
+        grid-area: 1 / 2 / 2 / 3;
+
+        &__img{
+            height: 10rem;
+        }
+    }
+
+    .menu {
+        grid-area: 1 / 3 / 2 / 4;
+        &__list {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
+
+        &__item {
+            padding: 2rem;
+        }
+
+        &__link {
+            &:visited,
+            &:link {
+                display: inline-block;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $color-primary ;
+                font-size: 1.6rem;
+                font-weight: 500;
+            }
+        }
+        .lang-icon {
+            height: 2rem;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+    }
+}

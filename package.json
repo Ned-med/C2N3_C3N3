@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "gh-pages": "^2.2.0",
-    "gulp-cli": "^2.2.0"
+    "gulp-cli": "^2.2.0",
+    "normalize.css": "^8.0.1"
   }
 }

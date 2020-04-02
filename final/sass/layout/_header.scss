@@ -50,9 +50,7 @@
             font-weight: $bold-font-weight;
 
             &__title {
-                display: inline-block;
-                font-size: 3.5rem;
-                color: $color-primary;
+                @include title;
             }
 
             &__icon {

@@ -1,0 +1,50 @@
+//*********************************************************//
+//Symtoms Section
+//*********************************************************//
+
+.symptom {
+    text-align: center;
+    &__title {
+        @include title;
+        
+    }
+    &-container {
+
+    }
+
+    &-sub-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        // grid-gap: 5rem;
+        row-gap: 5rem;
+        width: 70%;
+        margin: 0 auto;
+
+    }
+
+    &__item {
+        text-align: center;
+        &--1{
+
+        }
+        &--2{
+            
+        }
+        &--3{
+            
+        }
+        &--4{
+            
+        }
+    }
+
+    &__img{
+        height: 20rem;
+    }
+
+    &__name {
+        font-size: 3rem;
+        color: $color-dark-grey;
+    }
+}

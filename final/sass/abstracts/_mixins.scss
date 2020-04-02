@@ -4,3 +4,10 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
+
+@mixin title {
+    display: inline-block;
+    font-size: 3.5rem;
+    color: $color-primary;
+    font-weight: $bold-font-weight;
+}

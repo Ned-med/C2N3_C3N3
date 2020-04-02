@@ -1,60 +1,151 @@
 @@include('include/nav.html')
+<!-- ********************
+    
+Header Section
 
+ **********************-->
 <header class="header">
-    <div class="header-info">
-        <div class="header-info__title">LA DERNIÈRE INFO MÉDICALE</div>
-        <p class="header-info__description">
-            La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait être un facteur d'aggravation de l’infection. En cas de fièvre, prenez du paracétamol.
-            N'arrêtez pas votre traitement ! Consultez votre médecin ou votre pharmacien. 
-        </p>
+  <div class="header-info">
+    <div class="header-info__title">LA DERNIÈRE INFO MÉDICALE</div>
+    <p class="header-info__description">
+      La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait être
+      un facteur d'aggravation de l’infection. En cas de fièvre, prenez du
+      paracétamol. N'arrêtez pas votre traitement ! Consultez votre médecin ou
+      votre pharmacien.
+    </p>
+  </div>
+  <div class="header-main">
+    <div class="header-main-img">
+      <div class="rotateimg">
+        <img
+          src="images/circle.png"
+          alt="sick person"
+          class="header-main__img header-main__img--2"
+        />
+      </div>
+      <img
+        src="images/ab2.png"
+        alt="sick person"
+        class="header-main__img header-main__img--1"
+      />
     </div>
-    <div class="header-main">
-        <div class="header-main-img">
-            <div class="rotateimg">
-                <img src="images/circle.png" alt="sick person" class="header-main__img header-main__img--2">
-            </div>
-            <img src="images/ab2.png" alt="sick person" class="header-main__img header-main__img--1">
-           
-        </div>
-        <div class="heading">
-            <h1 class="heading__title u-margin-bottom-small"> Vous pensez avoir été exposé au Coronavirus COVID-19 et avez des symptômes ?</h1>
-            <div class="heading__icon u-margin-bottom-small">
-                <img src="images/1f637@2x.png" alt="feeling sick emoji" class="heading__icon-img">
-            </div>
-            <p class="heading__questions u-margin-bottom-medium">
-                Je reste vigilant ? <br>
-        Je programme une téléconsultation ? <br>
-                J'appelle le 15 ?<br>
-        Faites le test pour répondre en citoyen
-            éclairé selon vos symptômes.
-            </p>
-            <a href="" class="btn btn__test">Demarer le test</a>
-        </div>
+    <div class="heading">
+      <h1 class="heading__title u-margin-bottom-small">
+        Vous pensez avoir été exposé au Coronavirus COVID-19 et avez des
+        symptômes ?
+      </h1>
+      <div class="heading__icon u-margin-bottom-small">
+        <img
+          src="images/1f637@2x.png"
+          alt="feeling sick emoji"
+          class="heading__icon-img"
+        />
+      </div>
+      <p class="heading__questions u-margin-bottom-medium">
+        Je reste vigilant ? <br />
+        Je programme une téléconsultation ? <br />
+        J'appelle le 15 ?<br />
+        Faites le test pour répondre en citoyen éclairé selon vos symptômes.
+      </p>
+      <a href="" class="btn btn__test">Demarer le test</a>
     </div>
+  </div>
 </header>
+<!-- ********************
+    
+Symptoms Section
 
+ **********************-->
 <section class="symptom u-margin-top-medium">
-    <h1 class="symptom__title u-margin-bottom-big">Quels sont les symptômes à surveiller ?</h1>
-    <div class="symyom-container">
-        <div class="symptom-sub-container">
-            <div class="symptom__item symptom__item--1">
-                <img src="images/temperture.png" alt="temperture" class="symptom__img">
-                <h2 class="symptom__name">Fièver</h2>
-            </div>
-            <div class="symptom__item symptom__item--2">
-                <img src="images/Calque-2@2x.png" alt="Vomiting illustration" class="symptom__img">
-                <h2 class="symptom__name">Nausées <br> et vomissements</h2>
-            </div>
-            <div class="symptom__item symptom__item--3">
-                <img src="images/Calque@2x.png" alt="Gêne respiratoire" class="symptom__img">
-                <h2 class="symptom__name">Gêne <br> respiratoire</h2>
-            </div>
-            <div class="symptom__item symptom__item--4">
-                <img src="images/Calque-1@2x.png" alt="" class="symptom__img">
-                <h2 class="symptom__name">Toux et maux <br> de gorge</h2>
-            </div>
-        </div>
+  <h1 class="symptom__title u-margin-bottom-big">
+    Quels sont les symptômes à surveiller ?
+  </h1>
+  <div class="symyom-container">
+    <div class="symptom-sub-container">
+      <div class="symptom__item symptom__item--1">
+        <img
+          src="images/temperture.png"
+          alt="temperture"
+          class="symptom__img"
+        />
+        <h2 class="symptom__name">Fièver</h2>
+      </div>
+      <div class="symptom__item symptom__item--2">
+        <img
+          src="images/Calque-2@2x.png"
+          alt="Vomiting illustration"
+          class="symptom__img"
+        />
+        <h2 class="symptom__name">
+          Nausées <br />
+          et vomissements
+        </h2>
+      </div>
+      <div class="symptom__item symptom__item--3">
+        <img
+          src="images/Calque@2x.png"
+          alt="Gêne respiratoire"
+          class="symptom__img"
+        />
+        <h2 class="symptom__name">
+          Gêne <br />
+          respiratoire
+        </h2>
+      </div>
+      <div class="symptom__item symptom__item--4">
+        <img src="images/Calque-1@2x.png" alt="" class="symptom__img" />
+        <h2 class="symptom__name">
+          Toux et maux <br />
+          de gorge
+        </h2>
+      </div>
     </div>
+  </div>
 </section>
+
+<section class="recommandation">
+  <h1 class="recommandation__title u-margin-bottom-big">
+    Recommandations officielles
+  </h1>
+  <div class="recommandation__container">
+    <div class="recommandation__description">
+        <pre class="recommandation__description-text">
+        <span>Si vous pensez être malade, </span>
+          évitez les endroits publics. 
+          Ne rendez pas visite aux personnes fragiles. 
+          Évitez de sortir de chez vous. 
+          Respectez les mesures barrière (lavage de main, masque). 
+          Surveillez vos symptômes, l’évolution de votre température 
+          corporelle et recherchez un avis médical.
+        </pre>
+      </div>
+      <div class="recommandation__call">
+        <h2 class="recommandation__call-title">Apple Gratuit</h2>
+        <div class="recommandation__call-number"><span>080 100 47 47</span></div>
+        <a href="http://sante.gov.ma/" class="recommandation__call-site">www.sante.gov.ma</a>
+      </div>
+  </div>
+</section>
+
+<!-- ********************
+
+Call To Action section
+
+ **********************-->
+
+<section class="callToAction">
+    <h1 class="callToAction__title"></h1>
+    <div class="callToAction__icon u-margin-bottom-small">
+        <img
+          src="images/1f637@2x.png"
+          alt="feeling sick emoji"
+          class="callToAction__icon-img"
+        />
+      </div>
+      <a href="" class="btn btn__test">Demarer le test</a>
+</section>
+
+
+
 
 @@include('include/footer.html')

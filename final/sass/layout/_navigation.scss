@@ -21,6 +21,9 @@
 
         &__item {
             padding: 2rem;
+            &-btn {
+                margin-left: 2rem;
+            }
         }
 
         &__link {

@@ -1,0 +1,88 @@
+.footer {
+    text-align: center;
+    padding: 2rem;
+    &__logo {
+        &-img {
+            width: 9rem;
+        }
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 3fr;
+    }
+
+    &__navigation {
+        grid-area: 1/1/2/2;
+    }
+
+    &-menu {
+        &__list {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            // justify-content: flex-start;
+            flex-direction: column;
+            
+        }
+
+        &__item {
+            padding: 1.5rem 0;
+            
+            &-btn {
+                margin-bottom: 1.5rem;
+                // @include medium-font;
+                font-size: $medium-font-size !important;
+                font-weight: $medium-font-weight !important;
+            }
+        }
+
+        &__link {
+            &:visited,
+            &:link {
+                display: inline-block;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $color-primary ;
+                // @include medium-font;
+                font-size: $default-font-size ;
+                font-weight: $bold-font-weight ;
+            }
+        }
+    }
+
+    &-contacts {
+        grid-area: 1/2/2/3;
+        @include small-font;
+        
+        &__title {
+            color: $color-dark-grey;
+        }
+
+        &__desc {
+           
+            &--black {
+                color: $color-black;
+            }
+            &--green {
+                color: $color-green;
+            }
+        }
+    }
+
+    &__description {
+        grid-area: 1/3/2/4;
+
+    }
+
+    &__paragraph {
+        @include small-font;
+        text-align: start;
+        font-weight: $regular-font-weight;
+    }
+
+    &-sub {
+        background-color: $color-primary;
+        height: 3rem;
+    }
+}

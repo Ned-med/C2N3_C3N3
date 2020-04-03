@@ -38,6 +38,10 @@
             max-width: 100%;
             height: auto;
             vertical-align: middle;
+            transition: transform .3s;
+            &:hover {
+                transform: scale(1.2);
+            }
             // &--1 {}
 
             // &--2 {}

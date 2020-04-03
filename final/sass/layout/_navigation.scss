@@ -3,6 +3,10 @@
     grid-template-columns: 10rem repeat(2, 1fr) 10rem;
     align-items: center;
     // background-color: $color-secondary;
+    background-image: url("../images/Merged_bar-45.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     .logo-box {
         grid-area: 1 / 2 / 2 / 3;
 
@@ -34,15 +38,17 @@
                 text-decoration: none;
                 text-transform: uppercase;
                 color: $color-primary ;
-                font-size: 1.6rem;
-                font-weight: 500;
+                font-size: $default-font-size;
+                font-weight: $bold-font-weight;
             }
         }
-        .lang-icon {
-            height: 2rem;
-            position: absolute;
-            top: 5px;
-            right: 5px;
-        }
+
     }
+}
+
+.lang-icon {
+    height: 2rem;
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }

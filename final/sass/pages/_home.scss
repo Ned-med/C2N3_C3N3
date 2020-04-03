@@ -4,13 +4,13 @@
 
 .symptom {
     text-align: center;
+
     &__title {
         @include title;
-        
-    }
-    &-container {
 
     }
+
+    // &-container {}
 
     &-sub-container {
         display: grid;
@@ -25,26 +25,112 @@
 
     &__item {
         text-align: center;
-        &--1{
 
-        }
-        &--2{
-            
-        }
-        &--3{
-            
-        }
-        &--4{
-            
-        }
+        // &--1 {}
+
+        // &--2 {}
+
+        // &--3 {}
+
+        // &--4 {}
     }
 
-    &__img{
+    &__img {
         height: 20rem;
     }
 
     &__name {
         font-size: 3rem;
         color: $color-dark-grey;
+    }
+}
+
+
+//*********************************************************//
+
+//Recommandations  Section
+
+//*********************************************************//
+
+.recommandation {
+    background-color: $color-primary;
+    text-align: center;
+
+    &__title {
+        @include title;
+        color: $color-white;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem;
+    }
+
+    &__description {
+        grid-area: 1/1/2/2;
+        text-align: start;
+        @include medium-font;
+
+        &-text {
+            color: white;
+            font-family: 'Tajawal', sans-serif;
+
+            &--black {
+                color: $color-black;
+                font-weight: $bold-font-weight;
+            }
+        }
+    }
+
+    &__call {
+        grid-area: 1/2/2/3;
+
+        &-title {
+            @include title;
+            color: $color-yellow;
+        }
+
+        &-number {
+            background-color: $color-yellow;
+            color: $color-primary;
+            width: 25rem;
+            margin: 2rem auto;
+            @include medium-font;
+            padding: 1rem 1.5rem;
+            border-radius: .4rem;
+        }
+
+        &-site {
+            @include medium-font;
+            color: $color-white;
+            text-decoration-color: $color-yellow;
+        }
+    }
+}
+
+//*********************************************************//
+
+//Call to Action Section
+
+//*********************************************************//
+
+.callToAction {
+    background-color: $color-secondary;
+    text-align: center;
+    padding: 2rem;
+    &__title {
+        @include title;
+    }
+
+    &__icon {
+        &-img {
+            width: 9rem;
+            margin: 3rem 0;
+        }
+    }
+    &__btn {
+        @include medium-font;
+        max-width: 45%;
     }
 }

@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 10rem repeat(2, 1fr) 10rem;
     align-items: center;
+    // background-color: $color-secondary;
     .logo-box {
         grid-area: 1 / 2 / 2 / 3;
 

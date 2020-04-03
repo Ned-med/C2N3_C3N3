@@ -11,3 +11,8 @@
     color: $color-primary;
     font-weight: $bold-font-weight;
 }
+
+@mixin medium-font {
+    font-size: $medium-font-size;
+    font-weight: $medium-font-weight;
+}

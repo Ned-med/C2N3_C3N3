@@ -30,4 +30,15 @@
         width: 100%;
         font-size: 2rem;
     }
+
+    &__info {
+        background-color: $color-primary;
+        color: $color-white;
+        padding: 3rem;
+        border: 1px solid $color-primary;
+        border-radius: .5rem;
+        padding: 1rem;
+        width: 23rem;
+        font-size: 2rem;
+    }
 }

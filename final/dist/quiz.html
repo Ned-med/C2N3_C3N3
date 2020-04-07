@@ -32,6 +32,30 @@
  
 
 <!-- code goes here -->
+<section class="bar u-margin-top-medium">
+    <div class="bar-init">
+        <span class="bar__line"></span>
+        <span class="bar__dot-info bar__dot-info--init"></span>
+        <span class="bar__dot-info bar__dot-info--start"></span>
+        <span class="bar__dot-info bar__dot-info--yellow"></span>
+        <span class="bar__dot-info bar__dot-info--end"></span>
+        <p class="bar__text bar__text--info">Information</p>
+        <p class="bar__text bar__text--quiz">Quiz</p>
+        <p class="bar__text bar__text--results">Résultat</p>
+    </div>
+</section>
+<div class="progress-bar u-margin-top-medium">
+    <progress max="23" value="2" id="progress-bar"></progress>
+    <label for="progress-bar" class="progress-bar__label">1/23</label>
+</div>
+
+
+
+<!-- ***************************************************
+    
+Recommandation Section
+
+ *****************************************************-->
 
 <!-- ********************
     
@@ -77,8 +101,15 @@ Recommandations Section
             class="callToAction__icon-img"
           />
         </div>
-        <a href="" class="btn btn__test callToAction__btn">Demarer le test</a>
+        <a href="./quiz.html" class="btn btn__test callToAction__btn">Demarer le test</a>
   </section>
+
+<!-- ***************************************************
+    
+Footer Section
+
+ *****************************************************-->
+
 <footer class="footer">
     <div class="footer__logo u-margin-bottom-medium">
         <img src="images/logo__sante@2x.png" alt="footer logo" class="footer__logo-img">
@@ -117,6 +148,7 @@ Recommandations Section
     </div>
 </footer>
 <div class="footer-sub">&nbsp;</div>
+<script src="vendor/jquery/jquery-3.4.1.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 </html>

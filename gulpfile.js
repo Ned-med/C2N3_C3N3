@@ -87,6 +87,7 @@ function watch() {
     gulp.watch('./final/sass/**/*.scss', style);
     gulp.watch('./final/sass/**/*.scss', userref);
     gulp.watch('./final/*.html', userref);
+    gulp.watch('./final/js/**/*.js', userref);
     gulp.watch('./final/include/*.html', userref);
     gulp.watch('./**/*.html').on('change', browserSync.reload);
     gulp.watch('./final/js/**/*.js').on('change', browserSync.reload);

@@ -1,6 +1,37 @@
 @@include('include/nav.html')
 
 <!-- code goes here -->
+<section class="bar u-margin-top-medium">
+    <div class="bar-init">
+        <span class="bar__line"></span>
+        <span class="bar__dot-info bar__dot-info--init"></span>
+        <span class="bar__dot-info bar__dot-info--start"></span>
+        <span class="bar__dot-info bar__dot-info--yellow"></span>
+        <span class="bar__dot-info bar__dot-info--end"></span>
+        <p class="bar__text bar__text--info">Information</p>
+        <p class="bar__text bar__text--quiz">Quiz</p>
+        <p class="bar__text bar__text--results">Résultat</p>
+    </div>
+</section>
+<div class="progress-bar u-margin-top-medium">
+    <progress max="23" value="2" id="progress-bar"></progress>
+    <label for="progress-bar" class="progress-bar__label">1/23</label>
+</div>
+
+
+
+<!-- ***************************************************
+    
+Recommandation Section
+
+ *****************************************************-->
 
 @@include('include/recommandation.html')
+
+<!-- ***************************************************
+    
+Footer Section
+
+ *****************************************************-->
+
 @@include('include/footer.html')

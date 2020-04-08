@@ -23,7 +23,7 @@ jobs:
             gulp userref
     - name: Deploy to GH Pages
       run: |
-        git config --global user.email ${{secrets.GITHUB_EMAIL}}
-        git config --global user.name ${{secrets.GITHUB_USERNAME}}
-        git remote set-url origin https://${{secrets.GITHUB_PERSONAL_TOKEN}}@github.com/${{secrets.GITHUB_USERNAME}}/C2N3_C3N3.git
+        git config --global user.email ${{secrets.C3N3_EMAIL}}
+        git config --global user.name ${{secrets.C3N3_USERNAME}}
+        git remote set-url origin https://${{secrets.C3N3_PERSONAL_TOKEN}}@github.com/${{secrets.C3N3_USERNAME}}/C2N3_C3N3.git
         npm run deploy

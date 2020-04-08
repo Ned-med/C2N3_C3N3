@@ -4,7 +4,7 @@
   "description": "C'est un projet pour valider les compétences C3N3 (C2N3)",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d ./final/dist"
   },
   "repository": {
     "type": "git",

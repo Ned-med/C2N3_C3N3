@@ -5,15 +5,8 @@ Header Section
 
  **********************-->
 <header class="header">
-  <div class="header-info">
-    <div class="header-info__title">LA DERNIÈRE INFO MÉDICALE</div>
-    <p class="header-info__description">
-      La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait être
-      un facteur d'aggravation de l’infection. En cas de fièvre, prenez du
-      paracétamol. N'arrêtez pas votre traitement ! Consultez votre médecin ou
-      votre pharmacien.
-    </p>
-  </div>
+  @@include('include/announcements.html')
+
   <div class="header-main">
     <div class="header-main-img">
       <div class="rotateimg">
@@ -30,7 +23,7 @@ Header Section
       />
     </div>
     <div class="heading">
-      <h1 class="heading__title u-margin-bottom-small">
+      <h1 class="heading__title u-margin-bottom-small lango" key="heading__title-home">
         Vous pensez avoir été exposé au Coronavirus COVID-19 et avez des
         symptômes ?
       </h1>
@@ -41,13 +34,13 @@ Header Section
           class="heading__icon-img"
         />
       </div>
-      <p class="heading__questions u-margin-bottom-medium">
+      <p class="heading__questions u-margin-bottom-medium lango" key="heading__questions">
         Je reste vigilant ? <br />
         Je programme une téléconsultation ? <br />
         J'appelle le 15 ?<br />
         Faites le test pour répondre en citoyen éclairé selon vos symptômes.
       </p>
-      <a href="./quiz.html" class="btn btn__test">Demarer le test</a>
+      <a href="./quiz.html" class="btn btn__test lango" key="Demarer__test">Demarer le test</a>
     </div>
   </div>
 </header>

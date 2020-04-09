@@ -1,54 +1,3 @@
-// Translation Object containing all translations 
-var arrLang = {
-    'ar': {
-        "menu_advice": "نصائح",
-        "menu_home": "الرئيسية",
-        "header-info__title": "أخِر أخبار الطبية",
-        "header-info__description": "فاش كناخدو الأدوية المضادة للالتهابات )الإيبوبروفين والكورتيزون..... ( تقدر تكون سبب في زيادة المرض إلى كانت فيك سخانة خود الباراسيتامولإلى كنت تحت علاج بالأدوية مضادة للالتهابات، فمن الأفضل تستاشر مع طبيب",
-        "heading__title-home": "واش كتضن انك تعرضت لفيروس كورونا المستجد و عندك الأعراض ديالها؟",
-        "heading__questions": "نبقا راد لبال؟ \n نستاشر عبر الهاتف مع الجهات المعنية؟ \n نعيط ل  141؟  \n اروفقًا للأعراض ديالك باش ترتاح",
-        "Demarer__test": "نبداو الاختبار",
-        "symptom__title": "شنو هي الأعراض لواجب الانتباه ليها؟",
-        "symptom__fiever": "الحمى",
-        "symptom__nausees": "غثيان و التقيؤ",
-        "symptom__gene": "ضيق التنفسي",
-        "symptom__gorge": "السعال و التهاب الحلق",
-        "recommandation__title": "التوصيات الرسمية",
-        "recommandation__description": " إذا كنت كتضن انك مريض فمن الاحسن\n تبعد من البلايص العمومية \n متزورجش ناس الضعفاء الناس الكبار او المرضى \n بقا فدارك  \n التزم التعليمات لمفروضة: غسل يديك، ماسك \n راقب أعراض ديالك والتغيرات في درجة حرارة في جسم ديالك واستشر مع طبيب",
-        "recommandation__description-title": "إذا كنت كتضن انك مريض فمن الاحسن",
-        "recommandation__call-title": "اتصل مجانًا",
-        "callToAction__title": "واش كتضن انك تعرضت لفيروس كورونا المستجد و عندك الأعراض ديالها؟",
-        "footer-contacts__title": "اتصالات مفيدة",
-        "footer__chiffre" : "الرقم الاقتصادي' ألو اليقضة الوبائية'",
-        "footer__urgente": "للمساعدة الطبية الاستعجالية",
-
-    },
-
-    'fr': {
-        "menu_advice": "Conseil",
-        "menu_home": "Accueil",
-        "header-info__title": "LA DERNIÈRE INFO MÉDICALE",
-        "header-info__description": "La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait être un facteur d'aggravation de l’infection. En cas de fièvre, prenez du paracétamol. N'arrêtez pas votre traitement ! Consultez votre médecin ou votre pharmacien.",
-        "heading__title-home": "Vous pensez avoir été exposé au Coronavirus COVID-19 et avez des symptômes ?",
-        "heading__questions": "Je reste vigilant ? \n Je programme une téléconsultation ? \n J'appelle le 15 ? \n Faites le test pour répondre en citoyen éclairé selon vos symptômes.",
-        "Demarer__test": "Demarer le test",
-        "symptom__title": "Quels sont les symptômes à surveiller ?",
-        "symptom__fiever": "Fièver",
-        "symptom__nausees": "Nausées et vomissements",
-        "symptom__gene": "Gêne respiratoire",
-        "symptom__gorge": " Toux et maux de gorge",
-        "recommandation__title": "Recommandations officielles",
-        "recommandation__description": "  évitez les endroits publics.\n Ne rendez pas visite aux personnes fragiles.\n Évitez de sortir de chez vous.\n Respectez les mesures barrière (lavage de main, masque).\n Surveillez vos symptômes, l’évolution de votre température\n corporelle et recherchez un avis médical.",
-        "recommandation__description-title": "Si vous pensez être malade,",
-        "recommandation__call-title": "Apple Gratuit",
-        "callToAction__title": "Vous pensez avoir été exposé au Coronavirus COVID-19 et avez des symptômes ?",
-        "footer-contacts__title": "Contacts utiles",
-        "footer__chiffre" : "Chiffre économique 'Alo épidémie vigilance'",
-        "footer__urgente": "Aide médicale urgente",
-        
-    }
-}
-
 
 $(function () {
     var langBtn = document.getElementsByClassName('btn__lang');
@@ -76,8 +25,13 @@ $(function () {
 
 // The Actuale Translating Function
 function Translate(language) {
-    $('.lango').each(function (index, element) {
-        $(this).text(arrLang[language][$(this).attr('key')]);
+   
+    // $('.lango').each(function (index, element) {
+    //     $(this).innerHTML = arrLang[language][$(this).attr('key')];
+    // });
+    let lango = document.getElementsByClassName('lango');
+    Array.prototype.forEach.call(lango, el => {
+        el.innerHTML = arrLang[language][el.getAttribute("key")];
     });
 }
 
@@ -112,3 +66,13 @@ function Translate(language) {
 
 });
 
+// Toggle Style Current page for navbar
+
+// $('.menu_advice').click(()=> {
+//     $(this).toggleClass("active");
+//     $('.menu_home').toggleClass("active");
+// });
+// $('.menu_home').click(()=> {
+//     $(this).toggleClass("active");
+//     $('.menu_advice').toggleClass("active");
+// });

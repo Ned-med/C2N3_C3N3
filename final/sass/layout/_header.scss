@@ -19,11 +19,13 @@
 
     &-main {
         display: grid;
-        grid-template-columns: 10rem  repeat(auto-fit, minmax(50rem, 1fr)) 10rem;
+        grid-template-columns: 10rem repeat(auto-fit, minmax(50rem, 1fr)) 10rem;
+
         &-img {
             grid-area: 1/2/2/3;
             padding-top: 5rem;
             position: relative;
+
             .rotateimg {
                 position: absolute;
                 top: .4rem;
@@ -39,9 +41,11 @@
             height: auto;
             vertical-align: middle;
             transition: transform .3s;
+
             &:hover {
                 transform: scale(1.2);
             }
+
             // &--1 {}
 
             // &--2 {}
@@ -66,7 +70,6 @@
             &__questions {
                 font-size: 2.5rem;
                 color: $color-light-grey;
-
             }
         }
 

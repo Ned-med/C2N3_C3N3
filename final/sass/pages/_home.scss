@@ -59,6 +59,7 @@
     &__title {
         @include title;
         color: $color-white;
+
     }
 
     &__container {
@@ -67,16 +68,21 @@
         padding: 2rem;
         // @include responsive(tab-land) {
         //     grid-template-rows: repeat(2, 1fr);
-                
+
         // }
     }
-    
+
     &__description {
         // grid-area: 1/1/2/2;
-        text-align: center;
-        
-        
+        text-align: start;
+
+        @include responsive(tab-land) {
+            text-align: center;
+
+        }
+
         @include medium-font;
+
         // @include responsive(tab-land) {
         //     grid-area: 1/1/2/3;
         // }
@@ -92,6 +98,7 @@
     }
 
     &__call {
+
         // grid-area: 1/2/2/3;
         // @include responsive(tab-land) {
         //     grid-area: 2/1/3/3;
@@ -129,6 +136,7 @@
     background-color: $color-secondary;
     text-align: center;
     padding: 2rem;
+
     &__title {
         @include title;
     }
@@ -139,6 +147,7 @@
             margin: 3rem 0;
         }
     }
+
     &__btn {
         @include medium-font;
         max-width: 45%;

@@ -14,6 +14,12 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
+
+        @include responsive(phone) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
         grid-gap: 5rem;
         width: 80%;
         margin: 5rem auto;
@@ -90,6 +96,11 @@
         align-items: center;
         justify-content: space-around;
         flex-wrap: wrap;
+
+        @include responsive(phone) {
+            flex-direction: column;
+            align-content: space-around;
+        }
     }
 
 }
@@ -103,13 +114,14 @@
 .transmet {
     padding: 2rem;
     text-align: center;
-    &__title{
-    @include title;
+
+    &__title {
+        @include title;
     }
 
     &-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(40rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
         grid-gap: 10rem;
     }
 
@@ -117,16 +129,28 @@
         &--1 {
             justify-self: end;
             margin-right: 4rem;
+            @include responsive(tab-land) {
+                justify-self: center;
+                margin-right: 0rem;
+            }
         }
+
         &--2 {
             justify-self: start;
             margin-left: 7rem;
+            @include responsive(tab-land) {
+                justify-self: center;
+                margin-left: 0rem;
+           
+            }
         }
+
     }
 
     &__img {
         height: 12rem;
     }
+
     &__name {
         color: $color-primary-dark;
         font-size: $small-font-size;

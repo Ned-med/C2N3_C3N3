@@ -1,6 +1,7 @@
 
 $(function () {
     var langBtn = document.getElementsByClassName('btn__lang');
+    const RecDescription = document.getElementById('recommandation__desc');
     var lang;
     //in case of jumping to another page we need to maintaine the language that the user chose
     if (localStorage.getItem("lang")) {
@@ -44,11 +45,11 @@ function Translate(language) {
                 el.innerHTML = 'FRAN <img src="images/lang-icon.png" alt="" class="lang-icon">';
             });
             //Fliping Recommandation Section
-            document.getElementById('recommandation__desc').style.order = '2';
-            // document.getElementById('recommandation__call').style.gridArea = '1/1/2/2';
-            // document.getElementById('recommandation__description').style.textAlign = 'right';
-            // document.getElementById('recommandation__description').classList.toggle("text-to-right");
-
+            RecDescription.style.order = '2';
+            RecDescription.style.direction = 'rtl';
+            // document.getElementById('recommandation__description').style.direction = 'rtl';
+            // Array.from(RecDescription).forEach(curr => curr.style.direction = 'rtl');
+            
 
         } else if (lang === 'fr') {
             Array.prototype.forEach.call(langBtn, el => {
@@ -57,12 +58,13 @@ function Translate(language) {
                 el.innerHTML = 'عربي <img src="images/lang-icon.png" alt="" class="lang-icon">';
             });
             //Fliping Recommandation Section
-            document.getElementById('recommandation__desc').style.order = '0';
-            // document.getElementById('recommandation__call').style.gridArea = '1/2/2/3';
-            // document.getElementById('recommandation__description').style.textAlign = 'left';
-            // document.getElementById('recommandation__description').classList.toggle("text-to-right");
+            RecDescription.style.order = '0';
+            RecDescription.style.direction = 'ltr';
 
-            // window.location.reload();
+            // document.getElementById('recommandation__description').style.direction = 'ltr';
+            // Array.from(RecDescription).forEach(curr => curr.style.direction = 'ltr');
+
+
 
         }
     }

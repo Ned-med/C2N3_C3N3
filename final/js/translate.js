@@ -44,9 +44,10 @@ function Translate(language) {
                 el.innerHTML = 'FRAN <img src="images/lang-icon.png" alt="" class="lang-icon">';
             });
             //Fliping Recommandation Section
-            document.getElementById('recommandation__desc').style.gridArea = '1/2/2/3';
-            document.getElementById('recommandation__call').style.gridArea = '1/1/2/2';
-            document.getElementById('recommandation__description').style.textAlign = 'right';
+            document.getElementById('recommandation__desc').style.order = '2';
+            // document.getElementById('recommandation__call').style.gridArea = '1/1/2/2';
+            // document.getElementById('recommandation__description').style.textAlign = 'right';
+            // document.getElementById('recommandation__description').classList.toggle("text-to-right");
 
 
         } else if (lang === 'fr') {
@@ -56,9 +57,11 @@ function Translate(language) {
                 el.innerHTML = 'عربي <img src="images/lang-icon.png" alt="" class="lang-icon">';
             });
             //Fliping Recommandation Section
-            document.getElementById('recommandation__desc').style.gridArea = '1/1/2/2';
-            document.getElementById('recommandation__call').style.gridArea = '1/2/2/3';
-            document.getElementById('recommandation__description').style.textAlign = 'left';
+            document.getElementById('recommandation__desc').style.order = '0';
+            // document.getElementById('recommandation__call').style.gridArea = '1/2/2/3';
+            // document.getElementById('recommandation__description').style.textAlign = 'left';
+            // document.getElementById('recommandation__description').classList.toggle("text-to-right");
+
             // window.location.reload();
 
         }

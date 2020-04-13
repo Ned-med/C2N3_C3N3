@@ -63,15 +63,23 @@
 
     &__container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
         padding: 2rem;
+        // @include responsive(tab-land) {
+        //     grid-template-rows: repeat(2, 1fr);
+                
+        // }
     }
-
+    
     &__description {
-        grid-area: 1/1/2/2;
-        text-align: start;
+        // grid-area: 1/1/2/2;
+        text-align: center;
+        
+        
         @include medium-font;
-
+        // @include responsive(tab-land) {
+        //     grid-area: 1/1/2/3;
+        // }
         &-text {
             color: white;
             font-family: 'Tajawal', sans-serif;
@@ -84,8 +92,10 @@
     }
 
     &__call {
-        grid-area: 1/2/2/3;
-
+        // grid-area: 1/2/2/3;
+        // @include responsive(tab-land) {
+        //     grid-area: 2/1/3/3;
+        // }
         &-title {
             @include title;
             color: $color-yellow;

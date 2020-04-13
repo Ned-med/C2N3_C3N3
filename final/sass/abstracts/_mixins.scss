@@ -5,6 +5,9 @@
     animation-timing-function: linear;
 }
 
+
+
+
 @mixin title {
     display: inline-block;
     font-size: 3.5rem;
@@ -27,4 +30,46 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+//MEDIA QUERY MANNAGER
+
+/*
+0 - 600px: phone
+600 - 900px: Tbalet portrait
+900 - 1200px Tablet Landscape
+[1200 - 1800] is where our normal style apply
+1800px + Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: base typography > general layout + grid > page layout > components
+
+for media queries 1em = 16px
+*/
+@mixin responsive($breakpoint) {
+
+    @if $breakpoint == iphone {
+        @media screen and (max-width: 23.44em) { @content }; //375px
+     }
+     
+    @if $breakpoint == phone {
+        @media screen and (max-width: 37.5em) { @content }; //600px
+    }
+    
+    @if $breakpoint == tab-port {
+        @media screen and (max-width: 56.25em) { @content }; //900px
+    }
+
+    @if $breakpoint == tab-land {
+        @media screen and (max-width: 75em) { @content }; //1200px
+    }
+
+    @if $breakpoint == big-desktop {
+        @media screen and (min-width: 112.5em) { @content }; //1800px
+    }
 }

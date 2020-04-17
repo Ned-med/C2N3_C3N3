@@ -22,9 +22,6 @@
 .u-margin-top-huge { margin-top: 10rem !important; }
 .active { 
     color: $color-black !important;
-    font-weight: $bold-font-weight;
+    font-weight: $bold-font-weight !important;
 }
 
-.text-to-right {
-    text-align: right !important;
-}

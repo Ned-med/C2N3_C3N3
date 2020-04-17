@@ -69,15 +69,21 @@ function Translate(language) {
         }
     }
 
+//Toggling nav style 
+const menuAdvice = document.querySelectorAll('.menu_advice');
+const menuHome = document.querySelectorAll('.menu_home');
+let page = window.location.pathname.split("/").pop();
+if(page === "index.html") {
+    Array.from(menuHome, el => el.classList.add('active'));
+    // menuHome.classList.add('active')
+    console.log('true home'); 
+} else if (page === "advice.html") {
+   Array.from(menuAdvice, el => el.classList.add('active'));
+//    menuAdvice.classList.add('active');
+   console.log('true advice'); 
+}
+
+
 });
 
-// Toggle Style Current page for navbar
 
-// $('.menu_advice').click(()=> {
-//     $(this).toggleClass("active");
-//     $('.menu_home').toggleClass("active");
-// });
-// $('.menu_home').click(()=> {
-//     $(this).toggleClass("active");
-//     $('.menu_advice').toggleClass("active");
-// });

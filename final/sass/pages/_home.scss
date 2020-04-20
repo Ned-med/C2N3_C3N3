@@ -7,7 +7,7 @@
 
     &__title {
         @include title;
-
+        padding: 2rem;
     }
 
     // &-container {}
@@ -65,7 +65,6 @@
     &__container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
-        padding: 2rem;
         // @include responsive(tab-land) {
         //     grid-template-rows: repeat(2, 1fr);
 
@@ -75,7 +74,7 @@
     &__description {
         // grid-area: 1/1/2/2;
         text-align: start;
-
+        padding: 2rem;
         @include responsive(tab-land) {
             text-align: center;
 

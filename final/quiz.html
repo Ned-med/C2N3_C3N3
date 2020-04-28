@@ -24,29 +24,29 @@ QUIZ Section
 
  *****************************************************-->
 <section class="quiz">
-    <div class="quiz-body">
+    <div class="quiz-body hidden">
         <h2 class="quiz__question u-margin-bottom-medium">فهاد الايام لي فاتو، واش عيتي
             بطريقة ماشي عادية ؟
            </h2>
         <div class="quiz__answers">
-            <div class="quiz__answers-option quiz__answers-option--y hidden">
+            <!-- <div class="quiz__answers-option">
                 <input type="radio" id="f-option" name="selector">
-                <label for="f-option">نعم</label>
+                <label for="f-option">oui</label>
                 <div class="check"></div>
             </div>
-            <div class="quiz__answers-option quiz__answers-option--n hidden">
+            <div class="quiz__answers-option">
                 <input type="radio" id="f-option" name="selector">
-                <label for="f-option">لا</label>
+                <label for="f-option">non</label>
                 <div class="check"></div>
-            </div>
-            <div class="quiz__answers-input">
+            </div>-->
+            <!-- <div class="quiz__answers-input ">
                 <input type="number" min="1" max="110" step="1" value="" name="" id="val-input">
-                <label for=val-input"">عام</label>
-            </div>
+                <label for=val-input>عام</label>
+            </div>  -->
 
         </div>
     </div>
-    <div class="quiz-initiation hidden">
+    <div class="quiz-initiation">
         <h2 class="quiz-initiation__title">تمهيد</h2>
         <p class="quiz-initiation__description">هاد التطبيق مجاني، درناه باش نسهلو على الناس لي عندها إصابة بڤيروس كورونا19 يعرفو الحالة ديالهم و آش خصهم يديرو. منقدوش نضمنو بنسبة 100% دقة المعلومات لي تيعطيها هاد التطبيق. يقر المستخدم بأن التطبيق ، بما في ذلك الاختبار والمعلومات الأخرى لي فيه، لا تشكل توصية او فحص او وصفة طبية او اي حاجة عندها طبيعة طبية. </p>
         <hr class="quiz-initiation__break">
@@ -54,9 +54,9 @@ QUIZ Section
             المعلومات ديال هاد التطبيق هي المستوى الاول باش نقدو نحددو الحالات الممكنة. </p>
     </div>
     <div class="quiz-nav">
-        <button class="btn btn__info btn__init">نبداو الاختبار</button>
-        <button class="btn btn__info btn__init hidden">prev</button>
-        <button class="btn btn__info btn__init hidden">next</button>
+        <button class="btn btn__info btn__init btn-init">نبداو الاختبار</button>
+        <button class="btn btn__info btn__init btn-prev hidden">prev</button>
+        <button class="btn btn__info btn__init btn-next hidden">next</button>
     </div>
 </section>
 
@@ -74,4 +74,9 @@ Footer Section
 
  *****************************************************-->
 
-@@include('include/footer.html')
+@@include('include/footer.html', {"quiz" : true})
+    <!-- build:js js/quiz.min.js -->
+    <script src="js/questionsFR.js"></script>
+    <script src="js/questionsAR.js"></script>
+    <script src="js/quiz.js"></script>
+    <!-- endbuild -->

@@ -89,7 +89,7 @@
     width: 60%;
     margin: 0 auto;
     text-align: center;
-
+    transition: all .6s ease-in;
     &__label {
         @include small-font;
         position: relative;

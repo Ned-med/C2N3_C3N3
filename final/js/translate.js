@@ -3,7 +3,7 @@ $(function () {
     //Selectors
     var langBtn = document.getElementsByClassName('btn__lang');
     const RecDescription = document.getElementById('recommandation__desc');
-    const quizBody = document.querySelector('.quiz');
+    const quizBody = document.querySelector('.quiz-flip');
     var lang;
     //in case of jumping to another page we need to maintaine the language that the user chose
     if (localStorage.getItem("lang")) {

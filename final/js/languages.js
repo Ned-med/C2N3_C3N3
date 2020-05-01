@@ -37,7 +37,13 @@ const arrLang = {
         "transmet__face": "وجها لوجه لمدة <br/>  15 دقيقة على الأقل",
         "bar__text--info": "المعلومات",
         "bar__text--quiz": "استبيان",
-        "bar__text--results": "النتائج"
+        "bar__text--results": "النتائج",
+        "preamble" : "تمهيد",
+        "quiz-preamble-1": "هاد التطبيق مجاني، درناه باش نسهلو على الناس لي عندها إصابة بڤيروس كورونا19 يعرفو الحالة ديالهم و آش خصهم يديرو. منقدوش نضمنو بنسبة 100% دقة المعلومات لي تيعطيها هاد التطبيق. يقر المستخدم بأن التطبيق ، بما في ذلك الاختبار والمعلومات الأخرى لي فيه، لا تشكل توصية او فحص او وصفة طبية او اي حاجة عندها طبيعة طبية.",
+        "quiz-preamble-2": "هاد التطبيق متيعوضش الطبيب ديالك او الصيدلي لي يقدرو يعطيوك نصيحة أفضل. هادشي علاش قبل ما دير والو استاشر مع شي طبيب. المعلومات ديال هاد التطبيق هي المستوى الاول باش نقدو نحددو الحالات الممكنة. ",
+        "quizStart": "نبداو الاختبار",
+        "quizPrevious": "السؤال لقبل",
+        "quizNext": "دوز السؤال الاخر"
     },
 
     'fr': {
@@ -77,7 +83,13 @@ const arrLang = {
         "transmet__face": "Face à face pendant au <br> moins 15 min",
         "bar__text--info": "Information",
         "bar__text--quiz": "Quiz",
-        "bar__text--results": "Résultats"
-    }
+        "bar__text--results": "Résultats",
+        "preamble" : "Préambule",
+        "quiz-preamble-1": "L’application est fournie à titre gratuit, en l’état, uniquement à des fins d’information pour contribuer à fluidifier la prise en charge des personnes par les services d’urgences pendant l’épidémie de Coronavirus COVID-19. L’exhaustivité, l’exactitude, le caractère à jour des informations et contenus mis à disposition dans cette application, ou leur adéquation à des finalités particulières, ne sont pas garantis.",
+        "quiz-preamble-2": "Cette application ne substitue pas votre médecin qui est plus apte à vous donner plus de précision. Les informations de cette application est le premier niveau de la détection des cas possibles du COVID-19.",
+        "quizStart": "Démarrer le test",
+        "quizPrevious": "Précédent",
+        "quizNext": "Suivant"
 }
 
+}

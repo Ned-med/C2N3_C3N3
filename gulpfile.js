@@ -51,7 +51,7 @@ let userref = () => {
             basepath: '@file'
         }))
         .pipe(useref())
-        .pipe(gulpIf('*.js', terser()))
+        // .pipe(gulpIf('*.js', terser()))
         // 3. pass the file through css minifier
         // .pipe(gulpIf('*.css', cssnano()))
 

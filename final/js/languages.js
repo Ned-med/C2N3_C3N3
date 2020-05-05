@@ -43,7 +43,9 @@ const arrLang = {
         "quiz-preamble-2": "هاد التطبيق متيعوضش الطبيب ديالك او الصيدلي لي يقدرو يعطيوك نصيحة أفضل. هادشي علاش قبل ما دير والو استاشر مع شي طبيب. المعلومات ديال هاد التطبيق هي المستوى الاول باش نقدو نحددو الحالات الممكنة. ",
         "quizStart": "نبداو الاختبار",
         "quizPrevious": "السؤال لقبل",
-        "quizNext": "دوز السؤال الاخر"
+        "quizNext": "دوز السؤال الاخر",
+        "404-btn": "رجع لرئيسية",
+        "404-title": "راك توضرتي"
     },
 
     'fr': {
@@ -89,7 +91,9 @@ const arrLang = {
         "quiz-preamble-2": "Cette application ne substitue pas votre médecin qui est plus apte à vous donner plus de précision. Les informations de cette application est le premier niveau de la détection des cas possibles du COVID-19.",
         "quizStart": "Démarrer le test",
         "quizPrevious": "Précédent",
-        "quizNext": "Suivant"
+        "quizNext": "Suivant",
+        "404-btn": "page d'accueil",
+        "404-title": "vous êtes perdu"
 }
 
 }

@@ -42,9 +42,13 @@
         padding: 1rem;
         width: 23rem;
         font-size: 2rem;
-
-
     }
+
+   &__lost {
+    font-size: 4rem;
+    font-weight: $bold-font-weight;
+    width: 50rem;
+   }
 }
 
 button{

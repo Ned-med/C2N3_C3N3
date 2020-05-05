@@ -47,8 +47,11 @@ $(function () {
                 el.innerHTML = 'FRAN <img src="images/lang-icon.png" alt="" class="lang-icon">';
             });
             //Fliping Recommandation Section
-            RecDescription.style.order = '2';
-            RecDescription.style.direction = 'rtl';
+            if (RecDescription) {
+                RecDescription.style.order = '2';
+                RecDescription.style.direction = 'rtl';
+            }
+
 
             //Fliping Quiz
             quizBody ? quizBody.style.direction = 'rtl' : "";
@@ -64,11 +67,14 @@ $(function () {
                 el.innerHTML = 'عربي <img src="images/lang-icon.png" alt="" class="lang-icon">';
             });
             //Fliping Recommandation Section
-            RecDescription.style.order = '0';
-            RecDescription.style.direction = 'ltr';
+            if (RecDescription) {
+                RecDescription.style.order = '0';
+                RecDescription.style.direction = 'ltr';
+            }
+
             //Fliping Quiz
             quizBody ? quizBody.style.direction = 'ltr' : "";
-            
+
 
             // document.getElementById('recommandation__description').style.direction = 'ltr';
             // Array.from(RecDescription).forEach(curr => curr.style.direction = 'ltr');

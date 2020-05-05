@@ -1,0 +1,17 @@
+.lost {
+    text-align: center;
+    &-img{
+        margin: 9rem 0;
+    }
+    // &__img{}
+    &__title{
+        // @include title;
+        display: block;
+        text-transform: uppercase;
+        font-size: 8rem;
+        font-weight: $bold-font-weight;
+        color: $color-primary;
+
+    }
+
+}

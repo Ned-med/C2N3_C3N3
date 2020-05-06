@@ -16,6 +16,12 @@ let Controller = ((Model, UIctrl) => {
         document.querySelector(DOM.btnPrev).addEventListener('click', previousQuestion);
         document.querySelector(DOM.QuizAnswer).addEventListener('change', (e) => evaluateRadio(e));
         document.querySelector(DOM.QuizAnswer).addEventListener('keyup', (e) => evaluateRadio(e));
+
+        //languge of the quiz
+        document.querySelector('.btn__lang').addEventListener('click', () => {
+            UIctrl.questionsLang();
+            Model.adiviceLang();
+        } )
    
     }
 
@@ -46,7 +52,6 @@ let Controller = ((Model, UIctrl) => {
     let displayQuestions = () => {
         //3 . Get input data
         type = UIctrl.checkType(QuestionID);
-        console.log(QuestionID)
         if(input !== "" ) {
             //Add results to the data structure
             Model.storeData(QuestionID, type, input)
@@ -63,8 +68,6 @@ let Controller = ((Model, UIctrl) => {
 
             //Calculate  results based on the algorithm
             let finalResults = Models.CalculateResults();
-            console.log(finalResults);
-            
         
             // Calculate and UpdateResults
             UIctrl.DisplayResults(finalResults);
@@ -76,7 +79,6 @@ let Controller = ((Model, UIctrl) => {
         // 1 . get type and increment ID variable
         QuestionID++
         type = UIctrl.checkType(QuestionID);
-        console.log(QuestionID)
     
 
         // 2 . display Next question
@@ -124,6 +126,8 @@ let Controller = ((Model, UIctrl) => {
         init: () => {
             console.log('Quiz started !');
             setupEventListeners();
+            UIctrl.questionsLang();
+            Models.adiviceLang();
         }
     }
 })(Models, UIcontroller);

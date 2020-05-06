@@ -46,7 +46,13 @@ const arrLang = {
         "quizNext": "دوز السؤال الاخر",
         "404-btn": "رجع لرئيسية",
         "404-title": "راك توضرتي",
-        "quizReStart": "إعادة الإختبار "
+        "quizReStart": "إعادة الإختبار ",
+        "disclaimer": "قد تتغير التوصية المعروضة وفقًا لمعلومات من السلطات الصحية والباحثين. لا تشكل نصيحة طبية. إذا كنت في شك ، اطلب من طبيبك أو الصيدلي النصيحة.",
+        "call141":"اتصل ب",
+        "adviceResults": "بالنسبة لأي مريض يحال إلى استشارة طبية أو ممارس عام: حدد اتصل برقم 141 إذا ظهرت صعوبات في التنفس أو صعوبة كبيرة في تناول الطعام أو الشرب لأكثر من 24 ساعة.”",
+        "stayhome":"ابق في المنزل.",
+        "stayhomeMsg":"ابق في المنزل لأطول فترة ممكنة حتى تختفي الأعراض. قم بقياس درجة حرارتك مرتين في اليوم. تذكير بتدابير النظافة."
+
     },
 
     'fr': {
@@ -95,7 +101,15 @@ const arrLang = {
         "quizNext": "Suivant",
         "404-btn": "page d'accueil",
         "404-title": "vous êtes perdu",
-        "quizReStart": "redémarrer le test"
+        "quizReStart": "redémarrer le test",
+        "disclaimer": "La recommandation affichée peut évoluer suivant les informations en provenance des autorités de santé et des chercheurs. Elle ne constitue pas un avis médical. En cas de doute, demandez conseil à votre médecin ou pharmacien.",
+        "call141":"Appelez le",
+        "adviceResults":"Pour tout patient orienté vers une téléconsultation ou médecin généraliste : préciser “appelez le 141 si une gêne respiratoire ou des difficultés importantes pour s’alimenter ou boire pendant plus de 24h apparaissent.",
+        "stayhome":"Restez chez vous.",
+        "stayhomeMsg":"#RestezChezVous - Restez chez vous au maximum en attendant que les symptômes disparaissent. Prenez votre température deux fois par jour. Rappel des mesures d’hygiène."
+
+
+
 
 }
 

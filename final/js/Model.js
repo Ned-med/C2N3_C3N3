@@ -25,13 +25,7 @@ let Models = (() => {
         diarrhee: false
     }
 
-    //Advice variable
-    if (localStorage.getItem("lang")) {
-        localStorage.getItem("lang") === "fr" ? advice = adviceFR : advice = adviceAR;
-        
-    } else {
-        advice = adviceFR;
-    }
+
 
     //helper functions
     let addMinGravity = () =>{
@@ -133,6 +127,16 @@ let Models = (() => {
 
         advice: () => {
             return advice;
+        },
+
+        adiviceLang: () => {
+                //Advice variable
+    if (localStorage.getItem("lang")) {
+        localStorage.getItem("lang") === "fr" ? advice = adviceFR : advice = adviceAR;
+        
+    } else {
+        advice = adviceFR;
+    }
         }
     }
 })();

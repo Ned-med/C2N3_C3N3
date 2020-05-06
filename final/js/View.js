@@ -27,12 +27,7 @@ let UIcontroller = (() => {
     };
 
 
-    if (localStorage.getItem("lang")) {
-        localStorage.getItem("lang") === "fr" ? questions = questionsFR : questions = questionsAR;
-        
-    } else {
-        questions = questionsFR;
-    }
+
 
     return {
         getDOMstrings: () => {
@@ -123,6 +118,15 @@ let UIcontroller = (() => {
         },
         questions: () => {
             return questionsFR;
+        },
+
+        questionsLang: () => {
+            if (localStorage.getItem("lang")) {
+                localStorage.getItem("lang") === "fr" ? questions = questionsFR : questions = questionsAR;
+                
+            } else {
+                questions = questionsFR;
+            }
         }
     }
 })();

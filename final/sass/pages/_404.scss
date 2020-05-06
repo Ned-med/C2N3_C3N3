@@ -3,7 +3,12 @@
     &-img{
         margin: 9rem 0;
     }
-    // &__img{}
+    &__img{
+        @include responsive(tab-land) { // width < 1200?
+            width: 50rem;
+        }
+    
+    }
     &__title{
         // @include title;
         display: block;

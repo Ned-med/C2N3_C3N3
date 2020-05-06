@@ -90,6 +90,7 @@
     margin: 0 auto;
     text-align: center;
     transition: all .6s ease-in;
+
     &__label {
         @include small-font;
         position: relative;
@@ -168,6 +169,7 @@ progress {
                 color: $color-grey;
                 border: .3rem $color-grey solid;
                 appearance: textfield;
+
                 &:focus {
                     outline: 2px $color-yellow solid;
                 }
@@ -288,4 +290,65 @@ progress {
         text-align: center;
     }
 
+}
+
+
+//*****************************************
+
+// Quiz Answer Styling
+
+//*****************************************
+
+.QuizResult {
+    margin: 5rem auto;
+    width: 65vw;
+
+    &__disclamer {
+        background: rgba(201, 209, 218, 0.1);
+        border-left: .7rem solid #c9d1da;
+        padding: 3.6rem;
+
+        &-text {
+            @include small-font
+        }
+    }
+    &__container-title{
+        text-align: center;
+        margin: 0 auto;
+    }
+    &__title {
+        margin: 5rem 0;
+        font-size: 5rem;
+        font-weight: $bold-font-weight;
+    }
+
+    &__body {
+        background: rgba(0, 105, 204, 0.1);
+        border: .2rem solid #0069cc;
+        border-radius: .4rem;
+        padding: 3.6rem 3rem;
+        margin-bottom: 2.5rem;
+
+        &-call {
+            @include  medium-font;
+        }
+
+        &-alert {
+            width: 2.5rem;
+        }
+
+        &-Number {
+            text-decoration: none;
+        }
+
+    }
+
+    &__text {
+        @include small-font
+
+    }
+
+    &__stayhome {
+        @include  medium-font;
+    }
 }

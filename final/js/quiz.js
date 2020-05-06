@@ -5,21 +5,32 @@
 // ************************************************
 
 let Models = (() => {
-    let data = {
+    let advice, data;
+    data = {
         answers : [],
         gravityFa: {
             gravity:0,
             minor:0,
             major:0
         },
-        pronostique: 0
+        pronostique: 0,
+        age: 0,
+        temp:0
     }
     let symptoms = {
-        fiver: false,
+        fever: false,
         toux: false,
         courbatures: false,
         gorge: false,
         diarrhee: false
+    }
+
+    //Advice variable
+    if (localStorage.getItem("lang")) {
+        localStorage.getItem("lang") === "fr" ? advice = adviceFR : advice = adviceAR;
+        
+    } else {
+        advice = adviceFR;
     }
 
     //helper functions
@@ -41,10 +52,10 @@ let Models = (() => {
             data.answers.push(inputDATA)
         },
 
-        progressData: () => {
+        processData: () => {
             // processing symptoms
             if(data.answers[0].answer === "oui")
-            symptoms.fiver = true
+            symptoms.fever = true
             addMinGravity()
             if(data.answers[2].answer === "oui")
             symptoms.toux = true
@@ -54,10 +65,12 @@ let Models = (() => {
             symptoms.gorge = true
             if(data.answers[5].answer === "oui")
             symptoms.diarrhee = true
-
+            //age
+            data.age += parseFloat(data.answers[10].answer)
             // processing gravity factors
             if(parseFloat(data.answers[1].answer) > 39 || parseFloat(data.answers[1].answer) < 35.4 )
             addMinGravity()
+            data.temp += parseFloat(data.answers[1].answer) 
             if(data.answers[6].answer === "oui")
             addMinGravity()
             if(data.answers[7].answer === "oui")
@@ -75,6 +88,38 @@ let Models = (() => {
         },
 
         CalculateResults: () => {
+            if(symptoms.fever || symptoms.toux && symptoms.gorge || symptoms.toux && symptoms.courbatures || symptoms.fever && symptoms.diarrhee){
+                if(data.pronostique === 0){
+                    if(data.gravityFa.gravity === 0 && data.age < 50)
+                    return advice.num2
+                    if(data.gravityFa.gravity === 0 && 50 < data.age < 69 || data.gravityFa.minor >= 1)
+                    return advice.num2
+                }
+                else {
+                    if(data.gravityFa.gravity === 0 )
+                    return advice.num2
+                    if(data.gravityFa.minor == 2)
+                    return advice.stayhome
+                }
+
+            }
+            if(symptoms.fever && symptoms.toux ) {
+                if(data.pronostique === 0 && data.gravityFa.minor == 0)
+                return advice.num2
+                if(data.pronostique > 0 && data.gravityFa.minor >= 0 || data.gravityFa.gravity === 0)
+                return advice.num2
+
+
+            }
+            if(symptoms.fever || symptoms.toux || symptoms.gorge ||  symptoms.courbatures) {
+                if(data.gravityFa.gravity == 0)
+                return advice.num4
+                if(data.pronostique >= 1 && data.gravityFa.gravity >= 1)
+                return advice.num3
+                
+            }
+            
+            return advice.num5
             
         },
         Data: () => {
@@ -84,6 +129,10 @@ let Models = (() => {
         symptom: () => {
             console.log(symptoms);
             
+        },
+
+        advice: () => {
+            return advice;
         }
     }
 })();
@@ -108,7 +157,10 @@ let UIcontroller = (() => {
         QuizAnswer: '.quiz__answers',
         dotSteps: '.bar__dot-info--init',
         progressBar: '#progress-bar',
-        progressLabel: ".progress-bar__label"
+        progressBarclasse: '.progress-bar',
+        progressLabel: ".progress-bar__label",
+        QuizResult: ".QuizResult",
+        QuizAnsResult: ".QuizResult__title"
     };
 
 
@@ -134,8 +186,6 @@ let UIcontroller = (() => {
                 document.querySelector(DOMstrings.btnNext).classList.remove('hidden');
                 document.querySelector(DOMstrings.QuizBody).classList.remove('hidden');
                 document.querySelector(DOMstrings.dotSteps).style.left = '23.5rem';
-            } else if (id === 22) {
-                document.querySelector(DOMstrings.dotSteps).style.left = '44.5rem';
             } else {
                 document.querySelector(DOMstrings.btnPrev).classList.remove('hidden');
 
@@ -146,10 +196,16 @@ let UIcontroller = (() => {
             document.querySelector(DOMstrings.QuizQuestion).textContent = questions[id].question;
 
             if (type === "number") {
-                document.querySelector(DOMstrings.QuizAnswer).insertAdjacentHTML('beforeend', `<div class="quiz__answers-input ">
-                <input type="number" min="1" max="110" step="1" value="" placeholder="34 - 42" id="val-input">
-                <label for=val-input>${questions[id].label}</label>
-            </div> `)
+                if(id === 1) 
+                document.querySelector(DOMstrings.QuizAnswer).insertAdjacentHTML('beforeend', `<div class="quiz__answers-input "><input type="number" min="34" max="42" step="1" value="" placeholder="37,0" id="val-input" required><label for=val-input>${questions[id].label}</label></div> `)
+                
+                if(id === 10)
+                    document.querySelector(DOMstrings.QuizAnswer).insertAdjacentHTML('beforeend', `<div class="quiz__answers-input "><input type="number" min="1" max="110" step="1" value="" placeholder="15 - 110" id="val-input" required><label for=val-input>${questions[id].label}</label></div> `)
+                if(id === 11)
+                    document.querySelector(DOMstrings.QuizAnswer).insertAdjacentHTML('beforeend', `<div class="quiz__answers-input "><input type="number" min="80" max="250" step="1" value="" placeholder="60" id="val-input" required><label for=val-input>${questions[id].label}</label></div> `)
+                if(id === 12)
+                    document.querySelector(DOMstrings.QuizAnswer).insertAdjacentHTML('beforeend', `<div class="quiz__answers-input "><input type="number" min="20" max="250" step="1" value="" placeholder="170" id="val-input" required><label for=val-input>${questions[id].label}</label></div> `)
+
             } else {
                 questions[id].answers.forEach(element => {
                     let elname;
@@ -181,9 +237,26 @@ let UIcontroller = (() => {
 
 
         },
+
+        DisplayResults: (res) => {
+            document.querySelector(DOMstrings.QuizResult).classList.remove('hidden');
+            document.querySelector(DOMstrings.btnInit).classList.remove('hidden');
+            document.querySelector(DOMstrings.progressBarclasse).classList.add('hidden');
+            document.querySelector(DOMstrings.btnNext).classList.add('hidden');
+            document.querySelector(DOMstrings.btnPrev).classList.add('hidden');
+            document.querySelector(DOMstrings.QuizBody).classList.add('hidden');
+
+            document.querySelector(DOMstrings.QuizAnswer).textContent = res;
+
+        },
         progressBar: (id) => {
+            // if(id === 21){
+            //     document.querySelector(DOMstrings.dotSteps).style.left = '44.5rem';
+            //     return
+            // }
             document.querySelector(DOMstrings.progressBar).value = id;
             document.querySelector(DOMstrings.progressLabel).textContent = `${id}/22`;
+            
         },
         questions: () => {
             return questionsFR;
@@ -209,17 +282,20 @@ let Controller = ((Model, UIctrl) => {
         // });
         document.querySelector(DOM.btnNext).addEventListener('click', displayQuestions);
         document.querySelector(DOM.btnPrev).addEventListener('click', previousQuestion);
-        document.querySelector(DOM.QuizAnswer).addEventListener('change', (e) => evaluateAnswer(e));
+        document.querySelector(DOM.QuizAnswer).addEventListener('change', (e) => evaluateRadio(e));
+        document.querySelector(DOM.QuizAnswer).addEventListener('keyup', (e) => evaluateRadio(e));
+   
     }
 
 
 
-    let evaluateAnswer = (e) => {
-        if (e.target.value) {
+    let evaluateRadio = (e) => {
+        if (e.target.value && e.target.checkValidity() ) {
             enabelBTN(DOM.btnNext);
             input = e.target.value
         } else {
             disabelBTN(DOM.btnNext);
+            e.target.reportValidity();
         }
     }
 
@@ -238,6 +314,7 @@ let Controller = ((Model, UIctrl) => {
     let displayQuestions = () => {
         //3 . Get input data
         type = UIctrl.checkType(QuestionID);
+        console.log(QuestionID)
         if(input !== "" ) {
             //Add results to the data structure
             Model.storeData(QuestionID, type, input)
@@ -247,11 +324,27 @@ let Controller = ((Model, UIctrl) => {
             return
         }
         input = "";
+        // proccess data at the end
+        if(QuestionID === 21){
+            //Process the data 
+            Models.processData();
+
+            //Calculate  results based on the algorithm
+            let finalResults = Models.CalculateResults();
+            console.log(finalResults);
+            
+            //display  results to the user
+            UIctrl.DisplayResults(finalResults);
+            //Dot results
+           document.querySelector(DOM.dotSteps).style.left = '44.5rem';
+            return
+        }
+
         // 1 . get type and increment ID variable
         QuestionID++
         type = UIctrl.checkType(QuestionID);
-        
-
+        console.log(QuestionID)
+    
 
         // 2 . display Next question
         UIctrl.showQuestions(QuestionID, type);

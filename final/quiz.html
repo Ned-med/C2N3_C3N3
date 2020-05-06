@@ -46,6 +46,30 @@ QUIZ Section
                 </div>  -->
     
             </div>
+
+        </div>
+        <div class="QuizResult hidden">
+            <div class="QuizResult__disclamer">
+                <p class="QuizResult__disclamer-text">
+                    La recommandation affichée peut évoluer suivant les informations en provenance des autorités de santé et des chercheurs. Elle ne constitue pas un avis médical. En cas de doute, demandez conseil à votre médecin ou pharmacien.
+                </p>
+            </div>
+            <div class="QuizResult__container-title">
+                <h1 class="QuizResult__title">Votre situation peut relever d’un COVID 19. Vos symptômes nécessitent une prise en charge rapide.</h1>
+            </div>
+            <div class="QuizResult__body">
+                <p class="QuizResult__body-call">
+                    <img class="QuizResult__body-alert" alt="" src="images/alert-triangle.svg">
+                    Appelez le
+                    <a class="QuizResult__body-Number" href="tel:141">141</a>
+                </p>
+                <p class="QuizResult__text">
+                    Pour tout patient orienté vers une téléconsultation ou médecin généraliste : préciser “appelez le 141 si une gêne respiratoire ou des difficultés importantes pour s’alimenter ou boire pendant plus de 24h apparaissent.
+                </p>
+                <p class="QuizResult__stayhome">Restez chez vous.</p>
+                <p class="QuizResult__text">#RestezChezVous - Restez chez vous au maximum en attendant que les symptômes disparaissent. Prenez votre température deux fois par jour. Rappel des mesures d’hygiène.</p>
+
+            </div>
         </div>
         <div class="quiz-initiation">
             <h2 class="quiz-initiation__title lango" key="preamble">تمهيد</h2>
@@ -58,6 +82,7 @@ QUIZ Section
 
     <div class="quiz-nav">
         <button class="btn btn__info btn__init btn-init lango" key="quizStart">نبداو الاختبار</button>
+        <a href="quiz.html"><button class="btn btn__info btn__init btn-repete lango hidden" key="quizReStart"></button></a>
         <button class="btn btn__info btn__init btn-prev hidden lango" key="quizPrevious">prev</button>
         <button class="btn btn__info btn__init btn-next hidden lango" key="quizNext">next</button>
     </div>
@@ -81,5 +106,7 @@ Footer Section
     <!-- build:js js/quiz.min.js -->
     <script src="js/questionsFR.js"></script>
     <script src="js/questionsAR.js"></script>
-    <script src="js/quiz.js"></script>
+    <script src="js/Model.js"></script>
+    <script src="js/View.js"></script>
+    <script src="js/Controller.js"></script>
     <!-- endbuild -->

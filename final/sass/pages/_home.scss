@@ -135,7 +135,8 @@
     background-color: $color-secondary;
     text-align: center;
     padding: 2rem;
-
+    // position: relative;
+    // z-index: -3;
     &__title {
         @include title;
     }

@@ -179,7 +179,7 @@ const retrieve = (term) => {
    result.forEach(element => {
       list.innerHTML += `
       <li class="list-group-item d-flex justify-content-between align-items-center">
-      <span>${element}</span>
+      <span> ${element}</span>
       <i class="fas fa-trash delete"></i>
       </li>
       `;

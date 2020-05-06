@@ -7,7 +7,7 @@ const questionsFR = [
     {
         question: "Quelle est votre température corporelle ?",
         type: "number",
-        label: "deg"
+        label: "degés"
     },
     {
         question: "Ces derniers jours, avez-vous une toux ou une augmentation de votre toux habituelle ?",
@@ -117,4 +117,13 @@ const questionsFR = [
         type: 'radio',
         answers: ["oui", "non"]
     }
-]
+];
+
+const adviceFR = {
+    num1 : "nous vous conseillons de rester à votre domicile et de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez aussi utiliser à nouveau l’application pour réévaluer vos symptômes.",
+    num2 : "téléconsultation ou médecin généraliste ou visite à domicile.",
+    num3 : "Votre situation ne relève probablement pas du Covid-19. Consultez votre médecin au moindre doute.",
+    num4 : "Votre situation ne relève probablement pas du Covid-19. Un avis médical est recommandé. Au moindre doute, appelez le 141.",
+    num5 : "Votre situation ne relève probablement pas du Covid-19. N’hésitez pas à contacter votre médecin en cas de doute. Vous pouvez refaire le test en cas de nouveau symptôme pour réévaluer la   situation.   Pour   toute information concernant   le   Covid-19 allez vers la page d’accueil.",
+    disclamer: "La recommandation affichée peut évoluer suivant les informations en provenance des autorités de santé et des chercheurs. Elle ne constitue pas un avis médical. En cas de doute, demandez conseil à votre médecin ou pharmacien."
+}

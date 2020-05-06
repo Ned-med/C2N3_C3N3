@@ -45,7 +45,8 @@ const arrLang = {
         "quizPrevious": "السؤال لقبل",
         "quizNext": "دوز السؤال الاخر",
         "404-btn": "رجع لرئيسية",
-        "404-title": "راك توضرتي"
+        "404-title": "راك توضرتي",
+        "quizReStart": "إعادة الإختبار "
     },
 
     'fr': {
@@ -93,7 +94,9 @@ const arrLang = {
         "quizPrevious": "Précédent",
         "quizNext": "Suivant",
         "404-btn": "page d'accueil",
-        "404-title": "vous êtes perdu"
+        "404-title": "vous êtes perdu",
+        "quizReStart": "redémarrer le test"
+
 }
 
 }
